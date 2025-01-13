@@ -15,6 +15,7 @@ env = TimeLimit(
 # I implemented a simple DQN agent with target network (with replace update)
 
 # Libraries
+import os
 import random
 import numpy as np
 import matplotlib.pyplot as plt
@@ -118,7 +119,7 @@ class ProjectAgent:
         return
 
     def load(self):
-        path = "dqn_fredholm.pt"                                      # hard coded path
+        path = f"{os.getcwd()}/dqn_fredholm.pt"                       # hard coded path
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model.load_state_dict(torch.load(path, map_location=device))
         self.model.to(device)
