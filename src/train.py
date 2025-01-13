@@ -27,9 +27,9 @@ from evaluate import evaluate_HIV
 # Replay buffer from class
 class ReplayBuffer:
     def __init__(self, capacity, device):
-        self.capacity = int(capacity) # capacity of the buffer
+        self.capacity = int(capacity)
         self.data = []
-        self.index = 0 # index of the next cell to be filled
+        self.index = 0
         self.device = device
     def append(self, s, a, r, s_, d):
         if len(self.data) < self.capacity:
