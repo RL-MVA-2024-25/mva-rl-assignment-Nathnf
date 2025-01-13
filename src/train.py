@@ -13,6 +13,8 @@ env = TimeLimit(
 
 
 # I implemented a simple DQN agent with target network (with replace update)
+# The model was trained on the randomized environment because I found it led to better results
+# It could have been interesting to use both environments to train the model
 
 # Libraries
 import os
